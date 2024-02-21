@@ -73,6 +73,7 @@ jobs:
       uses: Azure/login@v1.6.1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
+        enviroment: DEV
 
     - name: 'Deploy to Azure WebApp'
       id: deploy-to-webapp
