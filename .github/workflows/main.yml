@@ -16,10 +16,6 @@ jobs:
     steps:
     - name: 'Log into Azure using github secret AZURE_CREDENTIALS'
       uses: Azure/login@v1.6.1
-      with:
-        client-id: "712e81e0-d6ef-4977-9aa8-71c9a68608aa"
-        tenant-id: "11dbbfe2-89b8-4549-be10-cec364e59551"
-        subscription-id: "2df56496-35a3-4894-a99a-5288758deaf9"
-        enable-AzPSSession: true
-     
+
+
     
