@@ -34,8 +34,7 @@ export async function createInvoice(formData: FormData) {
 
       //enviar api via post
       const https = require('https');
-      https.get('https://localhost:7205/Proposta/criar_invoice',
-          process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0", (res) => {
+      https.get('https://localhost:7205/Proposta/criar_invoice', (res) => {
         console.log('statusCode:', res.statusCode);
         console.log('headers:', res.headers);
       
