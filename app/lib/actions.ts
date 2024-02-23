@@ -33,19 +33,26 @@ export async function createInvoice(formData: FormData) {
       console.log("starting fetch WS");
 
       //enviar api via post
-      const https = require('https');
-      https.get('https://localhost:7205/Proposta/criar_invoicez',  (res) => {
-        console.log(' statusCode:', res.statusCode);
-        console.log(' headers:', res.headers);
-      
-        res.on('data', (d) => {
-          const logs = process.stdout.write(d);
-          console.log("Saida");
-          console.log(logs);
-        });
-      
-      }).on('error', (e) => {
-        console.log("DEU ERRO!!!");
-        console.error(e);
-      });
+      const https = require('node:https');
+
+      // const options = {
+      //   hostname: 'encrypted.google.com',
+      //   port: 443,
+      //   path: '/',
+      //   method: 'GET',
+      // };
+
+      // const req = https.request(options, (res) => {
+      //   console.log('statusCode:', res.statusCode);
+      //   console.log('headers:', res.headers);
+
+      //   res.on('data', (d) => {
+      //     process.stdout.write(d);
+      //   });
+      // });
+
+      // req.on('error', (e) => {
+      //   console.error(e);
+      // });
+      // req.end(); 
 }
