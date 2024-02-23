@@ -46,7 +46,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "next-medium"
+          app-name: "broncocliweb"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZURE_APPSERVICE_PUBLISHPROFILE_230224 }}
           package: ./build/standalone
