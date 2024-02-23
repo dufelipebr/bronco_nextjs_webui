@@ -34,9 +34,9 @@ export async function createInvoice(formData: FormData) {
 
       //enviar api via post
       const https = require('https');
-      https.get('https://localhost:7205/Proposta/criar_invoice', (res) => {
-        console.log('statusCode:', res.statusCode);
-        console.log('headers:', res.headers);
+      https.get('https://localhost:7205/Proposta/criar_invoice',  (res) => {
+        console.log(' statusCode:', res.statusCode);
+        console.log(' headers:', res.headers);
       
         res.on('data', (d) => {
           const logs = process.stdout.write(d);
