@@ -66,21 +66,21 @@ export async function createProposta(formData: FormData) {
       console.log("starting fetch WS");
       //const logs = fetch(`https://localhost:7205/Log/listar_logs`);
 
-      const https = require('https');
+      // const https = require('https');
       //const https = require('node:https');
-      https.post('https://localhost:7205/Proposta/criar_proposta',
-          process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0", (res) => {
-        console.log('statusCode:', res.statusCode);
-        console.log('headers:', res.headers);
+      // https.post('https://localhost:7205/Proposta/criar_proposta',
+      //     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0", (res) => {
+      //   console.log('statusCode:', res.statusCode);
+      //   console.log('headers:', res.headers);
       
-        res.on('data', (d) => {
-          const logs = process.stdout.write(d);
-          console.log("Saida");
-          console.log(logs);
-        });
+      //   res.on('data', (d) => {
+      //     const logs = process.stdout.write(d);
+      //     console.log("Saida");
+      //     console.log(logs);
+      //   });
       
-      }).on('error', (e) => {
-        console.log("DEU ERRO!!!");
-        console.error(e);
-      });
+      // }).on('error', (e) => {
+      //   console.log("DEU ERRO!!!");
+      //   console.error(e);
+      // });
 }
