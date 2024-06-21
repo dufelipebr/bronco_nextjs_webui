@@ -8,6 +8,12 @@ import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 
 export default function LoginForm() {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+
   return (
     <form className="space-y-3">
       <div className="flex-1 rounded-lg bg-gray-50 px-6 pb-4 pt-8">

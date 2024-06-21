@@ -12,11 +12,9 @@ export default function Page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Bem vindo ao portal do corretor.</strong>  Esse é um exemplo para {' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              desenvolvimento de aplicativos Next.JS
-            </a>
-            , para o sistema Bronco Seguros.
+            <strong>Bem vindo ao portal do corretor.</strong> 
+            {process.env.REACT_APP_URL_API}  
+
           </p>
           <Link
             href="/login"
