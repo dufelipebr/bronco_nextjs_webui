@@ -1,0 +1,6 @@
+GET https://localhost:7205/Proposta/listar_propostas/1
+
+
+POST https://localhost:7205/login
+
+

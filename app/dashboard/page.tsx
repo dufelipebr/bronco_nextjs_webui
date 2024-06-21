@@ -1,10 +1,54 @@
+'use client';
+
 import { Card } from '@/app/ui/dashboard/cards';
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitana } from '@/app/ui/fonts';
 import { fetchRevenue } from '@/app/lib/data'; 
+import React, { useState, useEffect  } from 'react'
+import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
-export default async function Page() {
+export default async function Page() 
+{
+  const [loggedIn, setLoggedIn] = useState('false')
+  const [email, setEmail] = useState('')
+
+  useEffect(() => 
+  {
+    console.log('useEffect')
+    const user = JSON.parse(localStorage.getItem('user'))
+    console.log(user)
+    if (user &&user.token) {
+       setLoggedIn(true)
+       setEmail(user.email)
+       return
+    }
+
+  },[])
+
+  // checkAccountExists((accountExists) => 
+  // {
+  //   console.log('checkAccountExists')
+  // }
+
+
+
+  // useEffect(() => {
+  //   // Fetch the user email and token from local storage
+  //   const user = JSON.parse(localStorage.getItem('user'))
+  
+  //   // If the token/email does not exist, mark the user as logged out
+  //   if (!user || !user.token) {
+  //     setLoggedIn(false)
+  //     return
+  //   }
+  
+    
+    
+  // }, [])
+
+
     const totalPaidInvoices = 1000;
     const totalPendingInvoices = 500;
     const numberOfInvoices = 150;
@@ -21,6 +65,10 @@ export default async function Page() {
         {  name: 'Propostas',  href: '/proposta',  icon: "DocumentDuplicateIcon" }, 
         { name: 'Apolices', href: '/apolice', icon: "UserGroupIcon" },
       ];
+
+ 
+
+
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>

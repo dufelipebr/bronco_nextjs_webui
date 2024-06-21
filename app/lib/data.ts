@@ -10,6 +10,33 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+export async function fetchFilteredpropostas(filterbyIdUser) {
+  // Add noStore() here to prevent the response from being cached.
+  // This is equivalent to in fetch(..., {cache: 'no-store'}).
+
+    // fetch('https://apibroncodev.azurewebsites.net/Proposta/listar_propostas}', {
+    //   method: 'GET',
+    //   headers: {
+    //       'Accept': 'application/json, text/plain',
+    //       'Content-Type': 'application/json;charset=UTF-8'
+    //   },
+    //   //mode: 'no-cors',
+    //   // body: {
+    //   //     "email": "du.felipe.br@gmail.com",
+    //   //     "senha": "adm"
+    //   //   },
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //   return data;
+    //   // console.log("Data: "+ data)
+    //   // localStorage.setItem('user', JSON.stringify({email, token: data.token}))
+    // })    
+    // .catch(error => {
+    //   console.log("Error detected: " + error)
+    // })
+}
+
 export async function fetchRevenue() {
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
